@@ -25,7 +25,9 @@ public class NIOServer {
 
         SocketChannel accept = serverSocketChannel.accept();
         while (true){
+            selector.wakeup();
             int select = selector.select();
+
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
             Iterator<SelectionKey> iterator = selectionKeys.iterator();
             while (iterator.hasNext()){
