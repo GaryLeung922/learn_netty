@@ -16,6 +16,10 @@ public class NIOClient {
         socketChannel.connect(new InetSocketAddress("localhost",9009));
 
 
+        System.out.println("1342535");
+        System.out.println("1342535");
+        System.out.println("1342535");
+        System.out.println("1342535");
 
     }
 }
