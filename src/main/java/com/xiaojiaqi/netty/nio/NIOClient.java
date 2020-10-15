@@ -13,8 +13,9 @@ public class NIOClient {
         SocketChannel socketChannel = SocketChannel.open();
 
         socketChannel.configureBlocking(false);
-        socketChannel.connect(new InetSocketAddress("localhost",9009));
-
+        System.out.println(socketChannel.connect(new InetSocketAddress("192.168.123.97",9009))
+);
+        System.out.println(socketChannel.finishConnect());
 
         System.out.println("1342535");
         System.out.println("1342535");

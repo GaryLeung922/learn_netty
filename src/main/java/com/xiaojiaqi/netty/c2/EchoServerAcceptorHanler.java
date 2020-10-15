@@ -20,6 +20,12 @@ public class EchoServerAcceptorHanler extends ChannelInboundHandlerAdapter {
     }
 
     @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println("EchoServerAcceptorHanler, channelRead");
+        super.channelRead(ctx, msg);
+    }
+
+    @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         System.out.println("handlerAdded");
     }
